@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <script>
+        var tk84 = 'Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsaW5oZ2lhIiwidXNlcklkIjoiMTIzIiwicm9sZSI6ImFkbWluIn0.XidtsmhESWZboA6Gd1egMPSiRSn5hW9e9js3BN9d-0VnetYB09-BsODuV_3bvWH0aijaypqUy0ns47JiFhXw5g';
+        var tk80 = 'Token eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVXNlciIsImV4cCI6MTU0Njc1NTY5NiwidXNlcm5hbWUiOiJxdWFuZ2xpbmhkMTA5N0BnbWFpbC5jb20ifQ.3ROu0SwFu_-57XK7XMDttXZ2qugLowAwij3MNDQ0k3M';
+        var link84 = 'http://localhost:8084/rest/hello';
+        var link80 = 'http://localhost:8080/chapter/list';
+        $.ajax({
+            type: "GET",
+            beforeSend: function(request) {
+                request.setRequestHeader("TOKEN", tk80);
+            },
+            url: link80,
+            processData: false,
+            success: function(msg) {
+                console.log("success: "+msg)
+            },
+            error: function(err){
+                console.log("error: "+err.getAllResponseHeaders)
+            }
+        });    
+    </script>
+</body>
+</html>
