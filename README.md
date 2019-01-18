@@ -1,5 +1,6 @@
 # jwt-security-auth
 =====
+
 Chạy bằng Postman
 lần đầu chạy (GET): http://localhost:8084/rest/hello
 API báo: 
@@ -12,7 +13,8 @@ API báo:
 }
 
 =====
-(POST) http://localhost:8084/token
+
+Gọi đến (POST): http://localhost:8084/token
 với body:
 	{
 		"userId": 123,
@@ -20,7 +22,9 @@ với body:
 		"role": "admin"
 	}
   API trả về Token
+  
   =====
+  
   Gọi lại (GET): http://localhost:8084/rest/hello
   với header: 
   Authorization: Token token_vừa_trả_về_ở_trên
